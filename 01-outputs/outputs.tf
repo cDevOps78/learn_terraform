@@ -3,7 +3,7 @@ output "name" {
 }
 
 output "my_name" {
-  value = lookup(var.names, "chaitu", "ram")
+  value = var.names[map_index]
 }
 
 output "list_name" {

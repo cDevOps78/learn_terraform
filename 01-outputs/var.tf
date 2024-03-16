@@ -1,7 +1,8 @@
 variable "names" {
     default = {
       chaitu: "chaithanya",
-      geetha: "geetha_subbarsjss"
+      geetha: "geetha_subbarsjss",
+      ram: "ramchahahahhsshhs"
     }
   
 }
@@ -13,4 +14,9 @@ variable "list_name" {
 
 variable "index" {
   default = 1
+}
+
+variable "map_index" {
+  default = "ram"
+  
 }

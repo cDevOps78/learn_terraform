@@ -12,5 +12,5 @@
 # }
 
 output "names" { 
-    value = var.list_name[1]
+    value = length(var.list_name[1])
 }

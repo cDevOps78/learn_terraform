@@ -2,7 +2,8 @@ variable "names" {
     default = {
       chaitu: "chaithanya",
       geetha: "geetha_subbarsjss",
-      ram: "ramchahahahhsshhs"
+      ram: "ramchahahahhsshhs",
+      game: "gamechanger"
     }
   
 }

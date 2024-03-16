@@ -12,5 +12,5 @@
 # }
 
 output "names" { 
-    value = var.list_name[count.index]
+    value = var.list_name[1]
 }

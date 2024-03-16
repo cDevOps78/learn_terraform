@@ -1,5 +1,5 @@
 output "name" {
-  value = var.names
+  value = keys(var.names)
 }
 
 # output "my_name" {

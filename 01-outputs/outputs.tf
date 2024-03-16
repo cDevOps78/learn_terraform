@@ -2,6 +2,11 @@ output "name" {
   value = keys(var.names)
 }
 
+output "length_map" {
+    value = length(var.names)
+  
+}
+
 # output "my_name" {
 #   value = lookup(var.names, "ram", "helellelle")
 # }

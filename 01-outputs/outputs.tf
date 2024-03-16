@@ -1,5 +1,5 @@
 output "name" {
-  value = var.names.upsana[length("child")]
+  value = var.names.upsana["child"]
 }
 
 output "childlenrth" {

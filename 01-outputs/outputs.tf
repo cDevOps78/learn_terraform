@@ -1,5 +1,5 @@
 output "name" {
-  value = var.names.upsana["child"]
+  value = var.names.upsana.ram["chaitu"]
 }
 
 output "childlenrth" {

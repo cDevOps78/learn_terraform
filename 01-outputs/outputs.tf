@@ -1,7 +1,10 @@
 output "name" {
-  value = var.names
+  value = var.names.upsana[length("child")]
 }
 
+output "childlenrth" {
+    value = length(var.names.upsana["child"])
+}
 # output "length_map" {
 #     value = length(var.names)
   

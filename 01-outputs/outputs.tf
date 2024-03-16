@@ -1,11 +1,11 @@
 output "name" {
-  value = keys(var.names)
+  value = var.names
 }
 
-output "length_map" {
-    value = length(var.names)
+# output "length_map" {
+#     value = length(var.names)
   
-}
+# }
 
 # output "my_name" {
 #   value = lookup(var.names, "ram", "helellelle")
@@ -16,6 +16,6 @@ output "length_map" {
   
 # }
 
-output "names" { 
-    value = length(var.list_name[1])
-}
+# output "names" { 
+#     value = length(var.list_name[1])
+# }

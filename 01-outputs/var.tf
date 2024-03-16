@@ -1,9 +1,15 @@
 variable "names" {
     default = {
+      ram = {
       chaitu: "chaithanya",
       geetha: "geetha_subbarsjss",
       ram: "ramchahahahhsshhs",
       game: "gamechanger"
+      }
+
+      upsana = {
+        child: "iviviivivvii"
+      }
     }
   
 }

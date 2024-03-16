@@ -1,5 +1,5 @@
 output "name" {
-  value = var.names["ram"]["ram"]
+  value = var.names.ram
 }
 
 output "childlenrth" {

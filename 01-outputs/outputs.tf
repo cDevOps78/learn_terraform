@@ -1,5 +1,5 @@
 output "name" {
-  value = var.names
+  value = "chaitu name is - ${var.names.ram.ram}"
 }
 
 output "childlenrth" {

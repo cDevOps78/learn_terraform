@@ -3,7 +3,7 @@ output "name" {
 }
 
 output "my_name" {
-  value = var.names["ram"]
+  value = var.names[var.map_index]
 }
 
 output "list_name" {

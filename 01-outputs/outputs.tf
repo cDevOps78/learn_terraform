@@ -3,7 +3,7 @@ output "name" {
 }
 
 output "my_name" {
-  value = lookup(var.names, chaitu, "ram")
+  value = lookup(var.names, "chaitu", "ram")
 }
 
 variable "names" {

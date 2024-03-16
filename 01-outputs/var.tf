@@ -17,6 +17,6 @@ variable "index" {
 }
 
 variable "map_index" {
-  default = "ram"
+  default = "chaitu"
   
 }

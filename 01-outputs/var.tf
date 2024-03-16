@@ -7,6 +7,6 @@ variable "names" {
 }
 
 variable "list_name" {
-  default = ['chauuuuruuru','applree','dkfjkdjfkdjfkj']
+  default = ["chauuuuruuru","applree","dkfjkdjfkdjfkj"]
   
 }

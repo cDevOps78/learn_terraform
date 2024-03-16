@@ -1,6 +1,6 @@
-# output "name" {
-#   value = "I am learning terrroform"
-# }
+output "name" {
+  value = var.names
+}
 
 # output "my_name" {
 #   value = lookup(var.names, "ram", "helellelle")

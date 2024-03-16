@@ -7,6 +7,6 @@ output "my_name" {
 }
 
 output "list_name" {
-    value = var.list_name
+    value = var.list_name[var.index]
   
 }

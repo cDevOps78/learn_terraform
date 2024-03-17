@@ -34,12 +34,12 @@ resource "null_resource" "test" {
 }
 
 output "f1" {
-    value = var.fruits1.name1.name
+    value = var.fruits1.name1
   
 }
 
 
 output "f2" {
-    value = lookup(var.fruits1.name1,"name","novalue")
+    value = var.fruits1.name2
   
 }

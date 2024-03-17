@@ -1,27 +1,14 @@
-resource "null_resource" "name" {
-    count = length(var.maps)
-}
-
-variable "lists" {
-    default = ["chaitru",4,5,true,6]
+provider "aws" {
+    region = "us-east-1"
   
 }
 
-variable "maps" {
-    default = {
-        ram = {
-        name: "name1"
-        names: "name2"
-        name4: "namr5"
-        }
-        ram1 = {
-            chaitu: "tiop"
-        }
-    }
-  
+resource "aws_iam_user" "iams" {
+    count = length(var.names)
+    name =  var.names[count.index]
 }
 
-output "length_map" {
-    value = var.maps.ram1
+variable "names" {
+    default = ["chaitu","geetha","rose"]
   
 }

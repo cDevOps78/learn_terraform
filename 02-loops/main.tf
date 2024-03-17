@@ -22,9 +22,20 @@ variable "fruits1" {
     }  
 }
 
-resource "null_resource" "test" {
-    for_each = var.fruits1 
-    provisioner "local-exec" {
-    command = "echo ${each.key} = ${each.value}"
-    } 
+# resource "null_resource" "test" {
+#     for_each = var.fruits1 
+#     provisioner "local-exec" {
+#     command = "echo ${each.key} = ${each.value}"
+#     } 
+# }
+
+output "f1" {
+    value = var.fruits1.name1
+  
+}
+
+
+output "f2" {
+    value = var.fruits1.name2
+  
 }

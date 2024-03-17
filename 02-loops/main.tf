@@ -43,4 +43,3 @@ output "f2" {
     value = lookup(var.fruits1.name1,"name","novalue")
   
 }
-psu

@@ -25,7 +25,7 @@ resource "aws_instance" "backend" {
 
 resource "aws_route53_record" "backend_record" {
   zone_id = "Z03998933DKS43BUYGV0L"
-  name    = "frontend.chaithanya.online"
+  name    = "backend.chaithanya.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.backend.private_ip]

@@ -3,6 +3,6 @@ resource "null_resource" "name" {
 }
 
 variable "lists" {
-    default = ["chaitru",4,5,true]
+    default = ["chaitru",4,5,true,6]
   
 }

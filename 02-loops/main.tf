@@ -12,7 +12,6 @@ resource "aws_iam_user" "iams" {
 
 
 resource "aws_iam_user" "iam" {
-    count = 0
     //count = length(var.names)
 
     name =  "chaitu"

@@ -1,3 +1,8 @@
 resource "null_resource" "name" {
-    count = 2
+    count = length(var.lists)
+}
+
+variable "lists" {
+    default = ["chaitru",4,5,true]
+  
 }

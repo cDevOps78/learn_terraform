@@ -9,6 +9,6 @@ resource "aws_iam_user" "iams" {
 }
 
 variable "names" {
-    default = ["chaitu","geetha","rose"]
+    default = ["chaitu","geetha","rose","lolll"]
   
 }

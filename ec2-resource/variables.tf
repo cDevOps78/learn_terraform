@@ -4,6 +4,10 @@ variable "tags" {
         frontend = {
             Name: "frontend"
             monitor: "yes"
+            frontend1 = {
+                Name = "frontend1"
+                rrr  = "rrrr"
+            }
         }
         backend = {
             Name: "backend"

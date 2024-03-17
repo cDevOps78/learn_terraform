@@ -7,6 +7,8 @@ variable "tags" {
             frontend1 = {
                 Name = "frontend1"
                 rrr  = "rrrr"
+                env  = "dev"
+                project = "expense"
             }
         }
         backend = {

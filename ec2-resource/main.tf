@@ -6,7 +6,7 @@ provider "aws" {
 resource "aws_instance" "frontend" {
     ami = "ami-05f020f5935e52dc4"
     instance_type = "t3.micro"
-    tags = lookup(var.tags.frontend,"frontend1",{Name: "chaitu", monitor: "yes"})
+    tags = var.tags.frontend.frontend1
 }
 
 # resource "aws_route53_record" "frontend_record" {

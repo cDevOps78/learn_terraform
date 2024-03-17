@@ -9,9 +9,16 @@ variable "lists" {
 
 variable "maps" {
     default = {
+        ram = {
         name: "name1"
         names: "name2"
         name4: "namr5"
+        }
     }
+  
+}
+
+output "length_map" {
+    value = length(var.maps)
   
 }

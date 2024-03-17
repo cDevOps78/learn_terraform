@@ -30,12 +30,12 @@ variable "fruits1" {
 # }
 
 output "f1" {
-    value = var.fruits1.name1
+    value = var.fruits1.name1.*
   
 }
 
 
 output "f2" {
-    value = var.fruits1.name2
+    value = var.fruits1.name2.*
   
 }

@@ -8,34 +8,33 @@ variable "fruits" {
     }  
 }
 
-
 variable "fruits1" {
     default = {
         name1 = {
-        apple: 10,
-        banana: 20
+        name: "apple"
+        price: 20
         }
        name2 = {
-        orange: 2000,
-        jobbbsbb: 60000
+        name: "banababab"
+        price: 60000
        }  
     }  
 }
 
-# resource "null_resource" "test" {
-#     for_each = var.fruits1 
-#     provisioner "local-exec" {
-#     command = "echo ${each.key} = ${each.value}"
-#     } 
+resource "null_resource" "test" {
+    for_each = var.fruits1 
+    provisioner "local-exec" {
+    command = "echo ${each.key}"
+    } 
+}
+
+# output "f1" {
+#     value = lookup(var.fruits1.name1,"banana","jobs")
+  
 # }
 
-output "f1" {
-    value = lookup(var.fruits1.name1,"banana","jobs")
-  
-}
 
-
-output "f2" {
-    value = var.fruits1.name2.*
+# output "f2" {
+#     value = var.fruits1.name2.*
   
-}
+# }

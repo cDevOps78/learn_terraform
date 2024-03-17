@@ -26,20 +26,20 @@ variable "fruits1" {
     }  
 }
 
-resource "null_resource" "test" {
-    for_each = var.fruits1 
-    provisioner "local-exec" {
-    command = "echo ${each.value.name}"
-    } 
+# resource "null_resource" "test" {
+#     for_each = var.fruits1 
+#     provisioner "local-exec" {
+#     command = "echo ${each.value.name}"
+#     } 
+# }
+
+output "f1" {
+    value = var.fruits1.name1.name
+  
 }
 
-# output "f1" {
-#     value = lookup(var.fruits1.name1,"banana","jobs")
-  
-# }
 
-
-# output "f2" {
-#     value = var.fruits1.name2.*
+output "f2" {
+    value = lookup(var.fruits1.name1,"name","novalue")
   
-# }
+}

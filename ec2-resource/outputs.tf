@@ -1,5 +1,5 @@
-output "frontend_data_ips" {
-    value = data.aws_instances.frontend.private_ips
+output "frontend_privateIP" {
+    value = aws_instance.frontend.private_ip
 }
 
 output "frontend_record_name" {

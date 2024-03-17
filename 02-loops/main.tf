@@ -2,7 +2,9 @@
 variable "fruits" {
     default = {
         apple: 10,
+        orange: 500
         banana: 20
+
     }  
 }
 

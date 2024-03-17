@@ -1,25 +1,28 @@
-provider "aws" {
-    region = "us-east-1"
-  
-}
 
-resource "aws_iam_user" "iams" {
-    //count = 0
-    //count = length(var.names)
-
-    name =  "ram"
+variable "fruits" {
+    default = {
+        apple: 10,
+        banana: 20
+    }  
 }
 
 
-resource "aws_iam_user" "iam" {
-    //count = length(var.names)
-
-    name =  "chaitu"
+variable "fruits1" {
+    default = {
+        name1 = {
+        apple: 10,
+        banana: 20
+        }
+       name2 = {
+        orange: 2000,
+        jobbbsbb: 60000
+       }  
+    }  
 }
 
-
-variable "names" {
-    default = ["chaitu","geetha","rose","lolll"]
-  
+resource "null_resource" "test" {
+    for_each = var.fruits 
+    provisioner "local-exec" {
+    command = "echo ${each.key} = ${each.value}"
+    } 
 }
-

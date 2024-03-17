@@ -14,5 +14,5 @@ resource "aws_route53_record" "frontend_record" {
   name    = "frontend.chaithanya.online"
   type    = "A"
   ttl     = 30
-  records = [data.aws_instances.frontend.private_ips]
+  records = [data.aws_instances.frontend.private_ips[0]]
 }

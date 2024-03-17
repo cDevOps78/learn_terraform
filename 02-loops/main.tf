@@ -17,7 +17,12 @@ variable "fruits1" {
        name2 = {
         name: "banababab"
         price: 60000
-       }  
+       } 
+       name3 = {
+        name: "banababab"
+        price: 60000
+       }
+
     }  
 }
 

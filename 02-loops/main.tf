@@ -22,6 +22,6 @@ variable "maps" {
 }
 
 output "length_map" {
-    value = length(var.maps)
+    value = var.maps.*
   
 }

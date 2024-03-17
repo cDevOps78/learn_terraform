@@ -30,7 +30,7 @@ variable "fruits1" {
 # }
 
 output "f1" {
-    value = var.fruits1.*
+    value = lookup(var.fruits1,"name1","novalw")
   
 }
 

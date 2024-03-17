@@ -14,6 +14,9 @@ variable "maps" {
         names: "name2"
         name4: "namr5"
         }
+        ram1 = {
+            chaitu: "tiop"
+        }
     }
   
 }

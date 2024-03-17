@@ -19,5 +19,5 @@ output "backend_record_name" {
 }
 
 output "mysql_record_name" {
-    value = aws_route53_record.mysql_record.name
+    value = aws_route53_record.mysql_record.fqdn
 }

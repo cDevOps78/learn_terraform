@@ -1,4 +1,4 @@
-data "aws_instances" "test" {
+data "aws_instances" "frontend" {
   instance_tags = {
     Name: "frontend"
   }

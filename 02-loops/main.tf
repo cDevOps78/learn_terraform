@@ -22,6 +22,6 @@ variable "maps" {
 }
 
 output "length_map" {
-    value = var.maps
+    value = var.maps.ram1
   
 }

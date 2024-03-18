@@ -86,6 +86,6 @@ variable "fruits" {
 resource "null_resource" "test2" {
      for_each = var.fruits
     provisioner "local-exec" {
-    command = "echo ${lookup(lookup(var.fruits,each.key,"novalue"),banana,"nofruits")}"
+    command = "echo ${lookup(lookup(var.fruits,each.key,"novalue"),"banana","nofruits")}"
     } 
 }

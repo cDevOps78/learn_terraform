@@ -59,7 +59,7 @@ variable "fruits" {
   
 }
 
-
+# ------------------IMP-----------------------------
 
 # resource "null_resource" "fruit1" {
 #      for_each = var.fruits
@@ -83,9 +83,22 @@ variable "fruits" {
 #     } 
 # }
 
+# resource "null_resource" "test2" {
+#      for_each = var.fruits
+#     provisioner "local-exec" {
+#     command = "echo ${lookup(lookup(var.fruits,each.key,"novalue"),"banana","nofruits")}"
+#     } 
+# }
+
 resource "null_resource" "test2" {
      for_each = var.fruits
     provisioner "local-exec" {
-    command = "echo ${lookup(lookup(var.fruits,each.key,"novalue"),"banana","nofruits")}"
+    command = "echo ${each.key["banana"]}"
     } 
 }
+
+
+
+
+
+#-----------------------IMP--------------------------------------------------------------

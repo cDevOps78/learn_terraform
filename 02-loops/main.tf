@@ -90,20 +90,21 @@ variable "fruits" {
 #     } 
 # }
 
-# resource "null_resource" "test3" {
-#      for_each = var.fruits
-#     provisioner "local-exec" {
-#     command = "echo ${var.fruits[each.key].banana}"
-#     } 
-# }
-
-
 resource "null_resource" "test3" {
      for_each = var.fruits
     provisioner "local-exec" {
-    command = "echo ${lookup(each.value,"banana","novalue")}  ---- ${lookup(each.value,"apple","novalue")}"
+    command = "echo ${var.fruits[each.key]}"
     } 
 }
+
+
+# resource "null_resource" "test3" {
+#      for_each = var.fruits
+#     provisioner "local-exec" {
+#     command = "echo ${lookup(each.value,"banana","novalue")}  ---- ${lookup(each.value,"apple","novalue")}"
+#     } 
+# }
+
 
 
 

@@ -24,10 +24,23 @@
 # # }
 
 
-output "name" {
-  value = var.name
+# output "name" {
+#   value = var.name
+# }
+
+# output "my_name" {
+#   value = var.my_name
+# }
+
+provider "aws" {
+  region = "us-east-1"
+  
 }
 
-output "my_name" {
-  value = var.my_name
+data "aws_instance" "foo" {
+  // instance_id = "i-instanceid"
+  filter {
+    name   = "tag:Name"
+    values = ["workstation"]
+  }
 }

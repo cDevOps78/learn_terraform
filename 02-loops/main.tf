@@ -97,6 +97,13 @@ variable "fruits" {
 #     } 
 # }
 
+resource "null_resource" "test3" {
+     for_each = var.fruits
+    provisioner "local-exec" {
+    command = "echo ${lookup(each.key,"banana","novalue")}  ---- ${lookup(each.key,"appple","novalue")}"
+    } 
+}
+
 
 
 

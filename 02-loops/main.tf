@@ -90,7 +90,7 @@ variable "fruits" {
 #     } 
 # }
 
-resource "null_resource" "test3" {
+resource "null_resource" "test4" {
      for_each = var.fruits
     provisioner "local-exec" {
     command = "echo ${var.fruits[each.key]}"

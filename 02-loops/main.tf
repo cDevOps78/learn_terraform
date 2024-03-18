@@ -47,8 +47,14 @@
 
 variable "fruits" {
     default = {
-        banana: 10
-        orange: 20
+        fruits1 = {
+            banana: 20
+            apple: 7000
+        }
+        fruits2 = {
+            banana: 2000
+            apple: 6060606
+        }
     }
   
 }
@@ -56,6 +62,6 @@ variable "fruits" {
 resource "null_resource" "fruits" {
      for_each = var.fruits
     provisioner "local-exec" {
-    command = "echo ${each.key} = ${each.value}"
+    command = "echo ${each.key}"
     } 
 }

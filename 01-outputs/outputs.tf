@@ -49,3 +49,14 @@ output "instance_privateip" {
   value = data.aws_instance.foo.private_ip
   
 }
+
+data "aws_security_group" "sg" {
+  tags = {
+    Name: "ALL_SG"
+  }
+}
+
+output "sg" {
+  value = data.aws_security_group.sg.id
+  
+}

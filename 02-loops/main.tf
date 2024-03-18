@@ -97,12 +97,12 @@ variable "fruits" {
 #     } 
 # }
 
-resource "null_resource" "test5" {
-     for_each = var.fruits
-    provisioner "local-exec" {
-    command = "echo ${var.fruits[each.key]["banana"]}"
-    } 
-}
+# resource "null_resource" "test5" {
+#      for_each = var.fruits
+#     provisioner "local-exec" {
+#     command = "echo ${var.fruits[each.key]["banana"]}"
+#     } 
+# }
 
 
 # resource "null_resource" "test3" {
@@ -112,6 +112,12 @@ resource "null_resource" "test5" {
 #     } 
 # }
 
+resource "null_resource" "fruit9" {
+     for_each = var.fruits
+    provisioner "local-exec" {
+    command = "echo ${var.fruits.fruits1.banana}-${var.fruits.fruits2.apple}"
+    } 
+}
 
 
 

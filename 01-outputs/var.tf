@@ -34,6 +34,6 @@ variable "name" {
   
 }
 
-variable "my_name" {
+# variable "my_name" {
   
-}
+# }

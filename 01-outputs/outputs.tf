@@ -44,3 +44,8 @@ data "aws_instance" "foo" {
     values = ["workstation"]
   }
 }
+
+output "instance_privateip" {
+  value = data.aws_instance.foo.private_ip
+  
+}

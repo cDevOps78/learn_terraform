@@ -52,7 +52,7 @@ output "instance_privateip" {
 
 data "aws_security_group" "sg" {
   tags = {
-    Name: "ALL_SG"
+    Name: "All_SG"
   }
 }
 

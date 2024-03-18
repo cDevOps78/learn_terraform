@@ -128,6 +128,14 @@ resource "null_resource" "fruit12" {
     } 
 }
 
+resource "null_resource" "fruit0" {
+     for_each = var.fruits
+    provisioner "local-exec" {
+    command = "echo ${each.value["banana"]}---${each.value["apple"]}"
+    } 
+}
+
+
 
 #-------IMP--------------------------------
 

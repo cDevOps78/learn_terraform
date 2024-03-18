@@ -33,3 +33,7 @@ variable "name" {
   default = "chaithanya"
   
 }
+
+variable "my_name" {
+  
+}

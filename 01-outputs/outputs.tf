@@ -27,3 +27,7 @@
 output "name" {
   value = var.name
 }
+
+output "my_name" {
+  value = var.my_name
+}

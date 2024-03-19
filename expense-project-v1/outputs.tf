@@ -7,3 +7,7 @@ data "aws_instances" "data_instances" {
 output "data_instances" {
     value = data.aws_instances.data_instances
 }
+
+output "length_instances" {
+  value = length(data.aws_instances.data_instances.private_ips)
+}

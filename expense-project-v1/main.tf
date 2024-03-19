@@ -6,13 +6,17 @@
 
 # -----------------------IMP-----------------------------------------
 # output "tags" {
-#   value = lookup(lookup(var.tags, "frontend", "Novalue"),"monitor","nomonitor")
-# }
-
-# output "tags" {
 #   value = var.tags.frontend.Name
 # }
 
-output "tags" {
-  value = var.tags.mysql["monitor"]
-}
+# output "tags" {
+#   value = var.tags.mysql["monitor"]
+# }
+
+# output "tags" {
+#   value = lookup(lookup(var.tags, "frontend", "Novalue"),"monitor","nomonitor")
+# }
+#-----------------------------------------------------------------------
+
+
+

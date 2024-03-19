@@ -5,5 +5,5 @@
 # }
 
 output "tags" {
-  value = lookup(var.tags, "forntend", "Novalue")
+  value = lookup(var.tags, "frontend", "Novalue")
 }

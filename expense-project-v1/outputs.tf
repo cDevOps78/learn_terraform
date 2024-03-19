@@ -12,9 +12,10 @@ output "length_instances" {
   value = length(data.aws_instances.data_instances.private_ips)
 }
 
-resource "null_resource" "fruit1" {
+resource "null_resource" "fruit2" {
     count = length(data.aws_instances.data_instances.private_ips)
     provisioner "local-exec" {
-    command = "echo ${data.aws_instances.data_instances.private_ips[count.index]}"
+   // command = "echo ${data.aws_instances.data_instances.private_ips[count.index]}"
+    command = "echo ${element(data.aws_instances.data_instances.private_ips,count.index)}"
     } 
 }

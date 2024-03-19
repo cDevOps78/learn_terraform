@@ -13,8 +13,8 @@ output "length_instances" {
 }
 
 resource "null_resource" "fruit1" {
-    for_each = tomap(data.aws_instances.data_instances.private_ips)
+    count = length(data.aws_instances.data_instances.private_ips)
     provisioner "local-exec" {
-    command = "echo ${data.aws_instances.data_instances.private_ips}"
+    command = "echo ${data.aws_instances.data_instances.private_ips[count.index]}"
     } 
 }

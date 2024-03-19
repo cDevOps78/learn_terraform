@@ -4,6 +4,13 @@
 #     tags = 
 # }
 
+# -----------------------IMP-----------------------------------------
+# output "tags" {
+#   value = lookup(lookup(var.tags, "frontend", "Novalue"),"monitor","nomonitor")
+# }
+
 output "tags" {
-  value = lookup(lookup(var.tags, "frontend", "Novalue"),"monitor","nomonitor")
+  value = var.tags.frontend.Name
 }
+
+

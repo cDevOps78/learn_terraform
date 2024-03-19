@@ -10,7 +10,7 @@ variable "tags" {
         }
         mysql = {
             Name: "mysql"
-            monitor: "yes"
+            monitor: "yes-monitor"
         }
     } 
 }

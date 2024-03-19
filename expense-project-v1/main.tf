@@ -9,8 +9,10 @@
 #   value = lookup(lookup(var.tags, "frontend", "Novalue"),"monitor","nomonitor")
 # }
 
+# output "tags" {
+#   value = var.tags.frontend.Name
+# }
+
 output "tags" {
-  value = var.tags.frontend.Name
+  value = var.tags.mysql["monitor"]
 }
-
-

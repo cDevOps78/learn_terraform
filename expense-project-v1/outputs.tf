@@ -15,6 +15,6 @@ output "length_instances" {
 resource "null_resource" "fruit1" {
     for_each = data.aws_instances.data_instances
     provisioner "local-exec" {
-    command = "echo ${each.value}"
+    command = "echo ${data.aws_instances.data_instances.private_ips}"
     } 
 }

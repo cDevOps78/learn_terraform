@@ -1,0 +1,5 @@
+###-Provisioners-###
+Types:-
+1. file provisioner
+2. local-exec provisioner
+3. remote-exec provisioner

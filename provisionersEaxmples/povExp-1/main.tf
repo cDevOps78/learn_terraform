@@ -1,4 +1,4 @@
-# Without decouple of Provisioner
+####--Without decouple of Provisioner--########
 
 provider "aws" {
     region      = "us-east-1"  
@@ -28,7 +28,7 @@ provider "aws" {
 #     }
 #  }
 
- ########## with decouple of Provisioner #######
+ ##########----with decouple of Provisioner---#######
 
 resource "aws_instance" "nginx" {
     ami                    = data.aws_ami.ami_id.id
@@ -49,7 +49,7 @@ resource "null_resource" "nginx_provisioner" {
         }
 
         inline = [ 
-            "dnf install nginx -y",
+            "sudo dnf install nginx -y",
             "sudo rm -rf /usr/share/nginx/html/*",
             "sudo systemctl start nginx"
          ]

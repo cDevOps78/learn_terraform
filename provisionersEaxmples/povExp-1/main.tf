@@ -5,13 +5,13 @@ provider "aws" {
 }
 
  resource "aws_instance" "nginx" {
-    ami           = data.aws_ami.ami_id 
+    ami           = data.aws_ami.ami_id.id
     instance_type = "t3.micro"
     vpc_security_group_ids = ["sg-037dcd68553894e24"]
     tags          = lookup(var.tags,"nginx","notags")
 
     provisioner "remote-exec" {
-        
+
          connection {
          type     = "ssh"
          user     = "ec2-user"

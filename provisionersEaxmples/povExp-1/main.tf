@@ -22,7 +22,7 @@ provider "aws" {
         inline = [ 
             "sudo dnf install nginx -y",
             "sudo rm -rf /usr/share/nginx/html/*",
-            "echo 'Hello-chaitu'  > /usr/share/nginx/html/index.html",
+            "sudo echo Hello-chaitu  > /usr/share/nginx/html/index.html",
             "sudo systemctl start nginx"
          ]
     }

@@ -6,7 +6,6 @@ provider "aws" {
 
 data "aws_security_groups" "test" {
   tags = {
-    Application = "k8s"
-    Environment = "dev"
+    Name : "All_SG"
   }
 }

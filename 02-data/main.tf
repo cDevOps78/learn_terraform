@@ -25,6 +25,6 @@ data "aws_key_pair" "example" {
 }
 
 output "aws_key_pair" {
-  value = data.aws_key_pair.example.public_key
+  value = data.aws_key_pair.example
 }
 

@@ -20,6 +20,7 @@ output "nested_map_song" {
 output "extras" {
  //  value = var.nested_map.songs [ Or ]
   value = lookup(var.nested_map, "songs", "nokeyis" )
+  // value = var.nested_map["movies"]
 }
 
 output "ext" {

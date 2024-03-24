@@ -1,3 +1,9 @@
 output "name" {
-  value = "chaithnaya"
+  value = var.name
 }
+
+output "map" {
+ value = var.map 
+}
+
+

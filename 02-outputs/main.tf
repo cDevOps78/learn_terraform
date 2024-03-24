@@ -3,7 +3,7 @@ output "name" {
 }
 
 output "map" {
- value = var.map 
+ value = lookup(var.map,"name2","novalus")
 }
 
 

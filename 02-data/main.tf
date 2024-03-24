@@ -6,6 +6,6 @@ provider "aws" {
 
 data "aws_security_groups" "test" {
   tags = {
-    Name : "All_SG"
+    Name: "All_SG"
   }
 }

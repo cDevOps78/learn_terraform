@@ -27,12 +27,12 @@ output "name" {
 #  value = var.nested_map["movies"]
 #}
 
-resource "null_resource" "map4" {
-  for_each = var.nested_map
-  provisioner "local-exec" {
-    command = "echo chauitu :- ${each.value.movie1}"
-  }
-}
+#resource "null_resource" "map4" {
+#  for_each = var.nested_map
+#  provisioner "local-exec" {
+#    command = "echo chauitu :- ${each.value.movie1}"
+#  }
+#}
 
 resource "null_resource" "map6" {
   for_each = var.nested_map

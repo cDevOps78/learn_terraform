@@ -28,9 +28,14 @@ output "aws_key_pair" {
   value = data.aws_key_pair.example.key_name
 }
 
+output "redhat_privateIp" {
+  value = aws_instance.redhat.private_ip
+}
 resource "aws_instance" "redhat" {
   ami  = "ami-02d7fd1c2af6eead0"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["data.aws_security_groups.test.ids"]
   key_name = data.aws_key_pair.example.key_name
 }
+
+

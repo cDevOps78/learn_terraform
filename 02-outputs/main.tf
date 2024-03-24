@@ -17,6 +17,10 @@ output "nested_map_song" {
   value = lookup(var.nested_map.songs, "song3" ,"nodefault")
 }
 
+output "extras" {
+  value = var.nested_map.songs
+}
+
 
 
 

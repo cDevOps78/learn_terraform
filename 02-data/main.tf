@@ -11,5 +11,5 @@ data "aws_security_groups" "test" {
 }
 
 output "aws_security_groups" {
-  value = data.aws_security_groups.test.id
+  value = data.aws_security_groups.test.ids
 }

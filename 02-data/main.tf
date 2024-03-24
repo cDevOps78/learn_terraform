@@ -34,7 +34,7 @@ output "redhat_privateIp" {
 resource "aws_instance" "redhat" {
   ami  = "ami-02d7fd1c2af6eead0"
   instance_type = "t2.micro"
-  // vpc_security_group_ids = ["data.aws_security_groups.test.ids"]
+  vpc_security_group_ids = ["data.aws_security_groups.test.ids[0]"]
   key_name = data.aws_key_pair.example.key_name
 }
 

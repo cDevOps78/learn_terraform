@@ -17,9 +17,9 @@ variable "nested_map" {
       movie3: "KGF"
     }
     songs = {
-      song1: "hello-world"
-      song2: "blueEyes",
-      song3: "BlueOcean"
+      movie1: "hello-world"
+      movie2: "blueEyes",
+      movie3: "BlueOcean"
     }
   }
 }

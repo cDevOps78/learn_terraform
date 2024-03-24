@@ -20,11 +20,11 @@ resource "aws_key_pair" "chaitu" {
   key_name = "chaitu"
 }
 
-#data "aws_key_pair" "example" {
-#  key_name           = "chaitu"
-#}
-#
-#output "aws_key_pair" {
-#  value = data.aws_key_pair.example.public_key
-#}
+data "aws_key_pair" "example" {
+  key_name           = "chaitu"
+}
+
+output "aws_key_pair" {
+  value = data.aws_key_pair.example.public_key
+}
 

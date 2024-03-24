@@ -2,17 +2,17 @@ provider "aws" {
   region = "us-east-1"
 }
 
-## Data source to security-groups
-#data "aws_security_groups" "test" {
-#  tags = {
-#    Name = "All_SG"
-#    Project = "Expense"        // It's behave likes a AND-Condition
-#  }
-#}
-#
-#output "aws_security_groups" {
-#  value = data.aws_security_groups.test.ids
-#}
+# Data source to security-groups
+data "aws_security_groups" "test" {
+  tags = {
+    Name = "All_SG"
+    Project = "Expense"        // It's behave likes a AND-Condition
+  }
+}
+
+output "aws_security_groups" {
+  value = data.aws_security_groups.test.ids
+}
 
 
 resource "aws_key_pair" "chaitu" {
@@ -28,3 +28,9 @@ output "aws_key_pair" {
   value = data.aws_key_pair.example.key_name
 }
 
+resource "aws_instance" "redhat" {
+  ami  = "ami-02d7fd1c2af6eead0"
+  instance_type = "t2.micro"
+  vpc_security_group_ids = ["data.aws_security_groups.test.ids"]
+  key_name = data.aws_key_pair.example.key_name
+}

@@ -34,11 +34,11 @@ output "name" {
 #  }
 #}
 
-resource "null_resource" "map7" {
+resource "null_resource" "map8" {
   for_each = var.nested_map
   provisioner "local-exec" {
-    // command = "echo each-value :- ${lookup(lookup(var.nested_map, each.key, "nokey"),"movie3","novaluse")}"
-       command = "echo movie3 :- ${lookup(var.nested_map.movies, "movie2", "nothing")} & ${lookup(var.nested_map.songs, "movie2", "nothing")}"
+     command = "echo each-value :- ${lookup(lookup(var.nested_map, each.key, "nokey"),"movie3","novaluse")}"
+       // command = "echo movie3 :- ${lookup(var.nested_map.movies, "movie2", "nothing")} & ${lookup(var.nested_map.songs, "movie2", "nothing")}"
   }
 }
 

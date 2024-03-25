@@ -1,7 +1,5 @@
-module "mymodule2" {
-  source = "./module1"
-}
 
-module "mymodule4" {
+module "name" {
   source = "./module1"
+  name = "chaithanyayayayayay"
 }

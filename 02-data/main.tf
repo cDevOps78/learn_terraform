@@ -40,12 +40,10 @@ provider "aws" {
 
 
 data "aws_security_group" "expense" {
-  tags = {
-    Name = "launch-4"
-  }
+ name = "launch-wizard-4"
 }
 
 output "aws_security_group_expense" {
-  value = data.aws_security_group.expense.name
+  value = data.aws_security_group.expense.tags
 }
 

@@ -4,7 +4,9 @@
 #  instance_type = lookup(each.value, "instance_type", "nokey")
 #  tags = lookup(each.value,"tags","notags")
 #}
-
+provider "aws" {
+  region = "us-east-1"
+}
 output "zonedetails" {
   value = data.aws_route53_zone.selected
 }

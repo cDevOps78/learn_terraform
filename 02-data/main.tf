@@ -44,6 +44,6 @@ data "aws_security_group" "expense" {
 }
 
 variable "aws_security_group_expense" {
-  default = var.aws_security_group_expense.name
+  default = data.aws_security_group_expense.name
 }
 

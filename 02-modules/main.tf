@@ -1,5 +1,8 @@
 
 module "name1" {
   source = "./module1"
-  name = "chaithanyayayayayay"
+}
+
+module "name2" {
+  source = "./module1"
 }

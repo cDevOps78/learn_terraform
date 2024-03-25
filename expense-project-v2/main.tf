@@ -5,7 +5,7 @@ provider "aws" {
 
 resource "aws_instance" "instances" {
   for_each = var.instances_map
-  ami           = "ami-05f020f5935e52dc4"
+  ami           = var.ami
   instance_type = lookup(each.value, "instance_type", "nokey")
   vpc_security_group_ids = [data.aws_security_group.security_group.id]
   tags = lookup(each.value,"tags","notags")

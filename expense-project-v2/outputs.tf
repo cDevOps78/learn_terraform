@@ -1,5 +1,5 @@
 output "zonedetails" {
-  value = data.aws_route53_zone.selected
+  value = data.aws_route53_zone.selected.zone_id
 }
 
 output "security_group" {

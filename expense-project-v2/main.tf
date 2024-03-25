@@ -17,6 +17,6 @@ resource "aws_route53_record" "www" {
   name    = "${lookup(lookup(each.value,"tags","notags"),"Name","noname")}-dev.chaithanya.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance.instances[each.key].private_ip]
+  records = [aws_instance.instances[each.key]["private_ip"]]
 }
 

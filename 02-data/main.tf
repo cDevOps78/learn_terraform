@@ -48,7 +48,7 @@ output "aws_security_group_expense" {
 }
 
 output "aws_security_group_expense_id" {
-  value = data.aws_security_group.expense.id
+  value = data.aws_security_group.expense
 }
 
 

@@ -18,3 +18,8 @@ output "name" {
   value = var.name
 }
 
+resource "null_resource" "names" {
+  provisioner "local-exec" {
+    command = "echo my Name is :- ${var.name}"
+  }
+}

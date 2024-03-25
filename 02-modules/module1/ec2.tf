@@ -1,6 +1,6 @@
 resource "aws_instance" "frontend" {
   ami           = "ami-02d7fd1c2af6eead0"
-  instance_type = "t2.micro"
+  instance_type = var.instancetype
   tags = {
     Name = var.Name
   }
@@ -8,6 +8,5 @@ resource "aws_instance" "frontend" {
 
 variable "Name" {}
 
-output "Name" {
-  value = var.Name
-}
+variable "instancetype" {}
+

@@ -1,5 +1,5 @@
 variable "production" {
-  default = "no-production"
+  default = "default-production"
 }
 
 output "production" {

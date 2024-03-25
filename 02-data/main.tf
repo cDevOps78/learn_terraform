@@ -40,7 +40,9 @@ provider "aws" {
 
 
 data "aws_security_group" "expense" {
-  name = "dev"
+  tags {
+    Name = "dev"
+  }
 }
 
 output "aws_security_group_expense" {

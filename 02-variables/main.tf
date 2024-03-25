@@ -10,6 +10,4 @@ output "common" {
   value = var.common
 }
 
-variable "common" {
-  default = "default-common"
-}
+variable "common" {}

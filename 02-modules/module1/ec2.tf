@@ -6,6 +6,8 @@ resource "aws_instance" "frontend" {
   }
 }
 
-variable "Name" {
-  default = "devv"
+variable "Name" {}
+
+output "Name" {
+  value = var.Name
 }

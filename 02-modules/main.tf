@@ -4,8 +4,10 @@ provider "aws" {
 
 module "name1" {
   source = "./module1"
+  Name = "frontend"
 }
 
 module "name2" {
   source = "./module1"
+  Name = "mysql"
 }

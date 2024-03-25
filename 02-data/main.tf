@@ -43,7 +43,7 @@ data "aws_security_group" "expense" {
   name = "launch-4"
 }
 
-variable "aws_security_group_expense" {
-  default = data.aws_security_group.expense.name
+output "aws_security_group_expense" {
+  value = data.aws_security_group.expense.name
 }
 

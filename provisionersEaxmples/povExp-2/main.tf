@@ -19,8 +19,12 @@ resource "null_resource" "nginxf" {
     inline = [
             "sudo dnf install nginx -y",
             "sudo rm -rf /usr/share/nginx/html/* ",
-            "echo 'hello-chaitu' > /usr/share/nginx/html/index.html",
+            "echo 'hello-chaitu12333' > /usr/share/nginx/html/index.html",
             "sudo systemctl start nginx"
     ]
   }
+}
+
+output "nginxPublicIP" {
+  value = aws_instance.nginx.public_ip
 }

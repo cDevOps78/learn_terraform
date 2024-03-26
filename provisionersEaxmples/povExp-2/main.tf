@@ -16,7 +16,8 @@ resource "aws_instance" "nginx" {
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-037dcd68553894e24"]
   tags = {
-    Name = lookup(var.instances,each.key,"nokey")
+    //Name = lookup(var.instances,each.key,"nokey")
+    Name = each.key
   }
 }
 

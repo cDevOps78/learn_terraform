@@ -16,7 +16,7 @@ resource "aws_instance" "nginx" {
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-037dcd68553894e24"]
   tags = {
-    Name = lookup(var.instances,each.value,"nokey")
+    Name = lookup(var.instances,each.key,"nokey")
   }
 }
 
@@ -27,7 +27,7 @@ resource "null_resource" "nginxf" {
       type     = "ssh"
       user     = "ec2-user"
       password = "DevOps321"
-      host     = lookup(aws_instance.nginx,each.value,"novalue").private_ip
+      host     = lookup(aws_instance.nginx,each.key,"novalue").private_ip
     }
     inline = [
             "sudo dnf install nginx -y",

@@ -4,6 +4,5 @@ variable "tags" {
             Name: "nginx"
             project: "expense-project"
         }
-    }
-  
+    }  
 }

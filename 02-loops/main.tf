@@ -98,7 +98,7 @@ variable "fruits" {
 # }
 
 # resource "null_resource" "test5" {
-#      for_each = var.fruits
+#     for_each = var.fruits
 #     provisioner "local-exec" {
 #     command = "echo ${var.fruits[each.key]["banana"]}"
 #     } 
@@ -126,6 +126,7 @@ variable "fruits" {
 #      for_each = var.fruits
 #     provisioner "local-exec" {
 #     command = "echo ${each.value.banana}---${each.value.apple}"
+#      command = "echo ${lookup(each.value,"banana","novalue")}
 #     } 
 # }
 
@@ -142,3 +143,15 @@ variable "fruits" {
 #-------IMP--------------------------------
 
 
+variable "fruits" {
+    default = {
+        fruits1 = {
+            banana: 20
+            apple: 7000
+        }
+        fruits2 = {
+            banana: 2000
+            apple: 6060606
+        }
+    }
+}

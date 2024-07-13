@@ -1,13 +1,17 @@
 
 # variable "fruits" {
 #     default = {
-#         apple: 10,
-#         orange: 500
-#         banana: 20
-
-#     }  
+#         apple : 10,
+#         orange : 500
+#         banana : 20
+#
+#     }
 # }
-
+# output "name" {
+#   value = "This is fruit name ${var.fruits.apple}"
+# }
+#
+#
 # variable "fruits1" {
 #     default = {
 #         name1 = {
@@ -17,13 +21,13 @@
 #        name2 = {
 #         name: "banababab"
 #         price: 60000
-#        } 
+#        }
 #        name3 = {
 #         name: "banababab"
 #         price: 60000
 #        }
-
-#     }  
+#
+#     }
 # }
 
 # resource "null_resource" "test" {
@@ -143,7 +147,7 @@ variable "fruits" {
 #-------IMP--------------------------------
 
 
-variable "fruits" {
+variable "fruits1" {
     default = {
         fruits1 = {
             banana: 20

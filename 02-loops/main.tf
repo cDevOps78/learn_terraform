@@ -159,3 +159,6 @@ variable "fruits1" {
         }
     }
 }
+variable "mname" {
+    default = "name"
+}
